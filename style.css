@@ -1,0 +1,36 @@
+:root{
+    --antique-white: #fdeddcff;
+    --dun: #d4c9b6ff;
+    --cinereous: #9a7d80ff;
+    --chamoisee: #90725fff;
+    --davys-gray: #50524fff;
+}
+
+body,html{
+    margin:0;
+    padding:0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--antique-white);
+    
+}
+
+header {
+    margin-top: 1em;
+    text-align: center;
+/*     border: 2px solid black;
+ */}
+
+header img {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+header h1  {
+    font-size:x-large;
+    
+    
+ /*    border: 2px solid black;
+    background-color: #9b8c6f;
+     */
+}
