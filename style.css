@@ -91,12 +91,7 @@ a {
     object-fit: cover;
 }
 /* Cambiar color al pasar el mouse por el botón */
-a:hover {
-    color: var(--cinereous);
-}
-li:hover {
-    background-color: antiquewhite;
-}
+
 
 /* Efecto de opacidad al iniciar la página */
 #contenedorMain {
@@ -118,15 +113,22 @@ li:hover {
 #contenedorMain header:nth-child(2){
     transition-delay: 0.2s;
 }
-#contenedorMain li:nth-child(1) {
+#contenedorMain ul:nth-child(1) {
     transition-delay: 0.3s;
 }
-#contenedorMain li:nth-child(2) {
+#contenedorMain ul:nth-child(2) {
     transition-delay: 0.4s;
 }
-#contenedorMain li:nth-child(3) {
+#contenedorMain ul:nth-child(3) {
     transition-delay: 0.5s;
 }
-#contenedorMain li:nth-child(4) {
+#contenedorMain ul:nth-child(4) {
     transition-delay: 0.6s;
+}
+
+a:hover {
+    color: var(--cinereous);
+}
+li:hover {
+    background-color: antiquewhite;
 }
