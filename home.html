@@ -2,50 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-
         <title>Alejandro Chávez - Links</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-
-        <script>
-            window.addEventListener("DOMContentLoaded", () => {
-                VANTA.BIRDS({
-                    el: "#vanta",
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.0,
-                    minWidth: 200.0,
-                    scale: 1.0,
-                    scaleMobile: 1.0,
-                    backgroundColor: 0xfdeddc,
-                    color1: 0xcf515a,
-                    color2: 0xede7e2,
-                    colorMode: "lerpGradient",
-                    birdSize: 1.1,
-                    wingSpan: 40.0,
-                    separation: 50.0,
-                    alignment: 46.0,
-                    cohesion: 36.0,
-                    quantity: 4.0,
-                });
-            });
-        </script>
     </head>
-    
+    <script src="script.js"></script>
     <body>
         <div id="vanta"></div>
-        <main>
-            
-            <header>
+        <main id="contenedorMain">
+            <header id="contenedorHeader">
                 <img id="profile_picture" src="images/profile_picture.png" alt="j" />
                 <h1>@aleasdev</h1>
             </header>
 
-            <ul>
+            <ul id="contenedor">
                 <li>
-                    <a href="https://www.youtube.com/@aleasdev">
+                    <a href="https://www.youtube.com/channel/UCEZhTSHjHyh6G-yg9Hl020g">
                         <img id="youtubeImage" src="images/youtube.png" alt="youtube" width="19" />
                         Youtube
                     </a>
@@ -74,4 +45,32 @@
             
         </main>
     </body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+        VANTA.BIRDS({
+            el: "#vanta",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            backgroundColor: 0xfdeddc,
+            color1: 0xcf515a,
+            color2: 0xede7e2,
+            colorMode: "lerpGradient",
+            birdSize: 1.5,
+            wingSpan: 40.0,
+            separation: 90.0,
+            alignment: 46.0,
+            cohesion: 36.0,
+            quantity: 3.0,
+        });
+        });
+    </script>
+    
 </html>

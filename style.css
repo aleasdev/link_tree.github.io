@@ -1,4 +1,5 @@
 :root {
+    /* Definir colores base para la página */
     --antique-white: rgb(253, 237, 220);
     --dun: rgba(192, 183, 167, 0.226);
     --cinereous: rgb(154, 125, 128);
@@ -7,7 +8,7 @@
     --wall: #d1cab8;
     --sweater: rgb(53, 54, 59);
 }
-
+/* ccs inicial, quitar el los bordes que vienen default y definir el color y fuentes de la página */
 body,
 html {
     z-index: 0;
@@ -17,11 +18,13 @@ html {
     font-family: "Open Sans", sans-serif;
     background-color: var(--antique-white);
 }
-
-main{
+/* definir que el main sea relativo, esto hace que main sea relativo a su posicion, se utiliza 
+en conjunto con el fondo de los pajaros, en el que mas abajo se define que es absoluto (que se 
+mueva independiente de la jerarquia que tenga el html)*/
+main {
     position: relative;
 }
-
+/* Foto de presentación junto con el nombre */
 header {
     margin-top: 1em;
     display: flex;
@@ -29,7 +32,6 @@ header {
     flex-direction: column;
     align-items: center;
 }
-
 header img {
     height: 200px;
     width: auto;
@@ -38,52 +40,47 @@ header img {
 }
 header h1 {
     display: inline-block;
-
     border-radius: 1em;
-    font-size: 1em;
-    font-weight: bold;
     margin: 1.5em;
     padding: 0.3em 0.6em;
+
+    font-size: 1em;
+    font-weight: bold;
 
     color: var(--antique-white);
     background-color: rgba(0, 0, 0, 0.87);
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
 }
-
+/* Botones */
 ul {
-    padding-left: 0;
-    list-style-type: none;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
     margin: 0 auto;
-
-    width: 20em;
+    max-width: 20em;
 }
 ul li {
-    background-color: var(--dun);
-
     border-radius: 10em;
-    justify-content: center;
+    margin: 1.5em;
 
-    padding: 1em;
-    margin: 2em;
-
+    background-color: var(--dun);
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
 }
 ul li a {
     display: flex;
     flex-direction: row;
+    padding: 1em;
+    gap: 0.5em;
     align-items: center;
     justify-content: center;
-
-    gap: 0.5em;
 }
-
 a {
     text-decoration: none;
     font-size: large;
     color: var(--sweater);
 }
-
-#vanta{
+/* opciones de la libreria vanta para añadir los pajaritos*/
+#vanta {
     z-index: 0;
     position: absolute;
     left: 0;
@@ -92,4 +89,44 @@ a {
     height: 100%;
     top: 0;
     object-fit: cover;
+}
+/* Cambiar color al pasar el mouse por el botón */
+a:hover {
+    color: var(--cinereous);
+}
+li:hover {
+    background-color: antiquewhite;
+}
+
+/* Efecto de opacidad al iniciar la página */
+#contenedorMain {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+#vanta{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+/* añadirle opacidad a las etiquetas y a los pajaros */
+#vanta div:nth-child(1){
+    transition-delay: 0.1s;
+}
+#contenedorMain header:nth-child(1){
+    transition-delay: 0.1s;
+}
+#contenedorMain header:nth-child(2){
+    transition-delay: 0.2s;
+}
+#contenedorMain li:nth-child(1) {
+    transition-delay: 0.3s;
+}
+#contenedorMain li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+#contenedorMain li:nth-child(3) {
+    transition-delay: 0.5s;
+}
+#contenedorMain li:nth-child(4) {
+    transition-delay: 0.6s;
 }

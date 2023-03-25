@@ -1,24 +1,55 @@
-import * as THREE from 'three.r134.min.js';
-import VANTA from 'vanta.birds.min.js';
+/* 
+// Crear un elemento de script para cada archivo que se va a importar
+const threeScript = document.createElement('script');
+const vantaScript = document.createElement('script');
+
+// Establecer el atributo src de cada elemento de script con la URL del archivo correspondiente
+threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
+vantaScript.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js';
+
+// Agregar cada elemento de script al documento
+document.head.appendChild(threeScript);
+document.head.appendChild(vantaScript);
 
 // Inicializar el efecto VANTA.BIRDS
-VANTA.BIRDS({
-  el: "#your-element-selector",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  backgroundColor: 0xrgb(253,237,220),
-  color1: 0xrgb(207,81,90),
-  color2: 0xrgb(237,231,226),
-  colorMode: "lerpGradient",
-  birdSize: 1.10,
-  wingSpan: 40.00,
-  separation: 50.00,
-  alignment: 46.00,
-  cohesion: 36.00,
-  quantity: 4.00
-});
+window.addEventListener("DOMContentLoaded", () => {
+  VANTA.BIRDS({
+      el: "#vanta",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      backgroundColor: 0xfdeddc,
+      color1: 0xcf515a,
+      color2: 0xede7e2,
+      colorMode: "lerpGradient",
+      birdSize: 1.5,
+      wingSpan: 40.0,
+      separation: 90.0,
+      alignment: 46.0,
+      cohesion: 36.0,
+      quantity: 3.0,
+  });
+}); */
+
+window.onload = function(){
+  cambiarOpacidadDeMain()
+  cambiarOpacidadDeBirds()
+}
+
+function cambiarOpacidadDeMain() {
+  var botones = document.querySelectorAll("#contenedorMain"); /* Obtiene todos los elementos li dentro del contenedor */
+  for (var i = 0; i < botones.length; i++) {
+    botones[i].style.opacity = "1"; /* Cambia la opacidad a 1 */
+  }
+  return;
+}
+
+function cambiarOpacidadDeBirds(){
+  var pajaro = document.getElementById("vanta");
+  pajaro.style.opacity = "1";
+  return;
+} 
